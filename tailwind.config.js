@@ -4,20 +4,22 @@ export default {
   theme: {
     extend: {
       colors: {
-        bark: "#3d2818",
-        cream: "#f5ede0",
-        terracotta: "#b8623e",
-        wheat: "#d4a574",
-        ember: "#7a3a1f",
-        crust: "#5a3520",
-        flour: "#faf5ec",
+        ink: "#2b1d12",
+        ivory: "#f4ecdb",
+        umber: "#8b4a2e",
+        // legacy aliases kept for safety in case anything stray references them
+        bark: "#2b1d12",
+        cream: "#f4ecdb",
       },
       fontFamily: {
-        display: ["Fraunces", "Lora", "Georgia", "serif"],
-        serif: ["Lora", "Source Serif Pro", "Georgia", "serif"],
+        display: ['"DM Serif Display"', '"EB Garamond"', "Georgia", "serif"],
+        serif: ['"EB Garamond"', '"Source Serif Pro"', "Georgia", "serif"],
       },
       letterSpacing: {
-        tightest: "-0.04em",
+        tightest: "-0.035em",
+      },
+      maxWidth: {
+        zine: "62rem",
       },
     },
   },

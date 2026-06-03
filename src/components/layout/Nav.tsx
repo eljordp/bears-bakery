@@ -1,52 +1,30 @@
-import { useEffect, useState } from "react";
-
 const links = [
   { href: "#menu", label: "Menu" },
-  { href: "#about", label: "Our Story" },
+  { href: "#about", label: "About" },
   { href: "#visit", label: "Visit" },
 ];
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-        scrolled
-          ? "bg-cream/90 backdrop-blur-md border-b border-bark/10 py-4"
-          : "bg-transparent py-6"
-      }`}
-    >
-      <div className="px-6 md:px-12 lg:px-16 flex items-center justify-between">
+    <header className="sticky top-0 inset-x-0 z-50 bg-ivory border-b border-ink/15">
+      <div className="max-w-zine mx-auto px-6 md:px-10 py-5 flex items-center justify-between">
         <a
           href="#top"
-          className="font-display text-xl md:text-2xl tracking-tightest text-bark"
+          className="font-display text-lg md:text-xl tracking-tightest text-ink lowercase"
         >
-          Bear&rsquo;s Bakery
+          bear&rsquo;s bakery
         </a>
-        <nav className="hidden md:flex items-center gap-10 text-sm tracking-wide uppercase">
+        <nav className="flex items-center gap-7 md:gap-10 font-serif italic text-sm md:text-base text-ink/85">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
-              className="text-bark/80 hover:text-terracotta transition-colors"
+              className="hover:text-umber transition-colors"
             >
               {l.label}
             </a>
           ))}
         </nav>
-        <a
-          href="#menu"
-          className="text-xs md:text-sm uppercase tracking-[0.18em] px-5 py-3 bg-bark text-cream hover:bg-ember transition-colors rounded-full"
-        >
-          Order
-        </a>
       </div>
     </header>
   );

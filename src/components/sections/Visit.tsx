@@ -1,122 +1,63 @@
 import { motion } from "framer-motion";
-import { MapPin, Clock, Mail, AtSign } from "lucide-react";
 
 export default function Visit() {
   return (
-    <section
-      id="visit"
-      className="relative bg-cream py-32 md:py-44 overflow-hidden grain-light"
-    >
-      <div className="px-6 md:px-12 lg:px-16 relative">
-        <div className="max-w-3xl mb-20 md:mb-28">
-          <div className="text-xs uppercase tracking-[0.32em] text-terracotta mb-8">
-            <span className="rule" />
-            Find Us
+    <section id="visit" className="relative bg-ivory paper-grain">
+      <div className="max-w-zine mx-auto px-6 md:px-10 py-32 md:py-56">
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
+          className="text-center max-w-xl mx-auto"
+        >
+          <div className="font-serif italic text-ink/60 text-sm md:text-base mb-6">
+            Visit
           </div>
-          <h2 className="font-display text-bark text-5xl md:text-7xl tracking-tightest leading-[1.02] font-light">
-            Saturdays at the <span className="italic text-ember">market</span>.
+          <h2 className="font-display text-ink tracking-tightest leading-[0.92] text-[clamp(2.4rem,6vw,4.5rem)]">
+            Saturdays at the <span className="italic">market</span>
           </h2>
-          <p className="mt-10 text-bark/70 text-lg md:text-xl leading-relaxed max-w-xl">
-            Come by early. The loaves come out warm, and they tend to leave the
-            same way. If you want to hold something specific, send a note before
-            Friday.
-          </p>
-        </div>
 
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-          {/* Info cards */}
-          <div className="lg:col-span-5 space-y-2">
-            {[
-              {
-                icon: MapPin,
-                label: "Where",
-                lines: ["Big Island Farmers Market", "Hawaii Island"],
-              },
-              {
-                icon: Clock,
-                label: "When",
-                lines: ["Saturday Mornings", "From 7am, until sold out"],
-              },
-              {
-                icon: Mail,
-                label: "Reservations",
-                lines: ["hello@bearsbakery.com"],
-                href: "mailto:hello@bearsbakery.com",
-              },
-              {
-                icon: AtSign,
-                label: "Follow Along",
-                lines: ["@bearsbakery"],
-                href: "#",
-              },
-            ].map((row, i) => {
-              const Icon = row.icon;
-              const Content = (
-                <motion.div
-                  initial={{ opacity: 0, y: 16 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-60px" }}
-                  transition={{
-                    duration: 0.7,
-                    delay: i * 0.08,
-                    ease: [0.22, 0.61, 0.36, 1],
-                  }}
-                  className="flex gap-6 py-8 border-t border-bark/15 group"
-                >
-                  <Icon
-                    className="w-6 h-6 text-terracotta mt-1 shrink-0"
-                    strokeWidth={1.5}
-                  />
-                  <div>
-                    <div className="text-xs uppercase tracking-[0.24em] text-bark/55 mb-3">
-                      {row.label}
-                    </div>
-                    {row.lines.map((l) => (
-                      <div
-                        key={l}
-                        className="font-display text-2xl md:text-3xl text-bark tracking-tightest leading-snug"
-                      >
-                        {l}
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              );
-              return row.href ? (
-                <a
-                  key={row.label}
-                  href={row.href}
-                  className="block hover:text-terracotta transition-colors"
-                >
-                  {Content}
-                </a>
-              ) : (
-                <div key={row.label}>{Content}</div>
-              );
-            })}
-            <div className="border-t border-bark/15" />
+          {/* Address */}
+          <div className="mt-16 md:mt-20 font-display text-ink tracking-tightest text-2xl md:text-3xl leading-snug">
+            Big Island Farmers Market
+            <br />
+            Hawai&lsquo;i Island
           </div>
 
-          {/* Photo */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
-            className="lg:col-span-7 relative"
-          >
-            <div className="aspect-[4/5] md:aspect-[5/6] rounded-md overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1534432182912-63863115e106?auto=format&fit=crop&w=1600&q=80"
-                alt="Farmers market stall with fresh bread"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="mt-6 text-xs uppercase tracking-[0.24em] text-bark/55">
-              At the stall, around sunrise
-            </div>
-          </motion.div>
-        </div>
+          {/* Hours — stacked block */}
+          <div className="mt-14 md:mt-16 font-serif italic text-ink/80 text-lg md:text-xl leading-[1.9]">
+            Saturday mornings
+            <br />
+            From 7 a.m., until sold out
+          </div>
+
+          {/* Hand divider */}
+          <div className="flex justify-center mt-16 md:mt-20">
+            <svg
+              viewBox="0 0 240 14"
+              className="handrule w-36"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1.2"
+              strokeLinecap="round"
+            >
+              <path d="M2 7 C 30 2, 60 12, 92 7 S 152 2, 184 7 S 230 12, 238 7" />
+            </svg>
+          </div>
+
+          {/* IG line */}
+          <p className="mt-12 font-serif italic text-ink/85 text-lg md:text-xl leading-relaxed">
+            We bake on Saturdays. See you there.
+            <br />
+            <a
+              href="https://instagram.com/bearsbakery"
+              className="text-umber underline decoration-umber/40 underline-offset-4 hover:decoration-umber"
+            >
+              @bearsbakery
+            </a>
+          </p>
+        </motion.div>
       </div>
     </section>
   );
