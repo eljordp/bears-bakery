@@ -4,20 +4,20 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: "#2b1d12",
-        ivory: "#f7f0e3",
-        umber: "#8b4a2e",
-        sage: "#6f7d5d",
-        leaf: "#46513d",
-        oat: "#ead8b6",
-        butter: "#c99a46",
+        ink: "rgb(var(--color-ink) / <alpha-value>)",
+        ivory: "rgb(var(--color-ivory) / <alpha-value>)",
+        umber: "rgb(var(--color-umber) / <alpha-value>)",
+        sage: "rgb(var(--color-sage) / <alpha-value>)",
+        leaf: "rgb(var(--color-leaf) / <alpha-value>)",
+        oat: "rgb(var(--color-oat) / <alpha-value>)",
+        butter: "rgb(var(--color-butter) / <alpha-value>)",
         // legacy aliases kept for safety in case anything stray references them
-        bark: "#2b1d12",
-        cream: "#f7f0e3",
+        bark: "rgb(var(--color-ink) / <alpha-value>)",
+        cream: "rgb(var(--color-ivory) / <alpha-value>)",
       },
       fontFamily: {
-        display: ['"DM Serif Display"', '"EB Garamond"', "Georgia", "serif"],
-        serif: ['"EB Garamond"', '"Source Serif Pro"', "Georgia", "serif"],
+        display: ["var(--font-display)"],
+        serif: ["var(--font-serif)"],
       },
       letterSpacing: {
         tightest: "0em",

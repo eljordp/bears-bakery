@@ -92,7 +92,7 @@ export default function Visit() {
 
             <figure>
               <div
-                className="overflow-hidden bg-ivory"
+                className="themed-cut overflow-hidden bg-ivory"
                 style={{
                   clipPath:
                     "polygon(2% 2%, 16% 0%, 36% 2%, 58% 0%, 78% 2%, 99% 1%, 100% 24%, 98% 48%, 100% 72%, 98% 98%, 80% 100%, 58% 98%, 38% 100%, 18% 98%, 1% 100%, 0% 74%, 2% 52%, 0% 28%)",
@@ -101,9 +101,8 @@ export default function Visit() {
                 <img
                   src={VISIT_IMG}
                   alt="Bakery pastries and loaves arranged for pickup"
-                  className="aspect-[4/3] w-full object-cover md:aspect-[16/10]"
+                  className="theme-photo aspect-[4/3] w-full object-cover md:aspect-[16/10]"
                   loading="lazy"
-                  style={{ filter: "sepia(0.16) saturate(0.98)" }}
                 />
               </div>
               <figcaption className="mt-3 font-serif italic text-sm text-ink/55">

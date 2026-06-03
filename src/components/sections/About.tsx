@@ -36,7 +36,7 @@ export default function About() {
           {/* Inline image — small, sits inside the essay */}
           <figure className="my-12 mx-auto max-w-2xl md:my-14">
             <div
-              className="overflow-hidden"
+              className="themed-cut overflow-hidden"
               style={{
                 clipPath:
                   "polygon(3% 2%, 14% 0%, 30% 1.5%, 50% 0.5%, 70% 2%, 88% 0%, 99% 3%, 98% 18%, 100% 36%, 99% 56%, 100% 76%, 98% 95%, 90% 100%, 70% 98%, 50% 100%, 30% 99%, 12% 100%, 2% 97%, 0% 80%, 1% 60%, 0% 40%, 2% 20%)",
@@ -45,8 +45,7 @@ export default function About() {
               <img
                 src={ABOUT_IMG}
                 alt="Hands working dough on a wooden board"
-                className="aspect-[5/3] w-full object-cover"
-                style={{ filter: "sepia(0.28) saturate(0.94)" }}
+                className="theme-photo aspect-[5/3] w-full object-cover"
               />
             </div>
             <figcaption className="mt-4 text-center font-serif italic text-sm text-ink/55">

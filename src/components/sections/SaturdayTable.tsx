@@ -33,7 +33,7 @@ export default function SaturdayTable() {
           {tablePhotos.map((photo, index) => (
             <figure key={photo.label} className="group">
               <div
-                className="overflow-hidden bg-oat"
+                className="themed-cut overflow-hidden bg-oat"
                 style={{
                   clipPath:
                     index === 1
@@ -44,9 +44,8 @@ export default function SaturdayTable() {
                 <img
                   src={photo.src}
                   alt={photo.alt}
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="theme-photo aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                   loading={index === 0 ? "eager" : "lazy"}
-                  style={{ filter: "sepia(0.18) saturate(0.96)" }}
                 />
               </div>
               <figcaption className="mt-3 font-serif italic text-sm text-ink/55">

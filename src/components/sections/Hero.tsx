@@ -30,14 +30,14 @@ export default function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="mailto:hello@bearsbakery.com?subject=Reserve%20a%20Saturday%20loaf"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3.5 font-serif italic text-ivory transition-colors hover:bg-umber"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3.5 font-serif italic text-ivory transition-colors hover:bg-umber sm:whitespace-nowrap"
             >
               <Mail className="h-4 w-4" strokeWidth={1.7} />
               Reserve Saturday loaf
             </a>
             <a
               href="#menu"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/25 px-5 py-3.5 font-serif italic text-ink transition-colors hover:border-sage hover:text-leaf"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/25 px-5 py-3.5 font-serif italic text-ink transition-colors hover:border-sage hover:text-leaf sm:whitespace-nowrap"
             >
               <ArrowDown className="h-4 w-4" strokeWidth={1.7} />
               See this week&rsquo;s menu
@@ -64,7 +64,7 @@ export default function Hero() {
 
         <figure className="relative mx-auto w-full max-w-[34rem]">
           <div
-            className="relative overflow-hidden"
+            className="themed-cut relative overflow-hidden"
             style={{
               clipPath:
                 "polygon(2% 1%, 8% 0%, 18% 2%, 28% 0.5%, 40% 1.8%, 52% 0%, 64% 1.5%, 76% 0.5%, 86% 2%, 95% 0.5%, 100% 3%, 99% 12%, 100% 24%, 98% 38%, 100% 52%, 99% 66%, 100% 80%, 98% 92%, 100% 99%, 92% 100%, 78% 98%, 64% 100%, 50% 99%, 36% 100%, 22% 98%, 10% 100%, 2% 99%, 0% 88%, 1% 72%, 0% 56%, 2% 40%, 0% 24%, 1% 10%)",
@@ -73,8 +73,7 @@ export default function Hero() {
             <img
               src={HERO_IMG}
               alt="A loaf of sourdough cooling on linen"
-              className="aspect-[4/5] w-full object-cover md:aspect-[5/6]"
-              style={{ filter: "sepia(0.32) saturate(0.92) contrast(0.96)" }}
+              className="theme-photo aspect-[4/5] w-full object-cover md:aspect-[5/6]"
             />
             <div
               className="absolute inset-0 mix-blend-multiply"

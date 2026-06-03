@@ -114,7 +114,7 @@ export default function Menu() {
             >
               <div className="grid gap-5 md:grid-cols-[8rem_1fr_auto] md:items-start">
                 <div
-                  className="overflow-hidden bg-oat"
+                  className="themed-cut overflow-hidden bg-oat"
                   style={{
                     clipPath:
                       "polygon(3% 2%, 20% 0%, 42% 2%, 64% 0%, 86% 2%, 99% 4%, 98% 24%, 100% 52%, 98% 78%, 100% 98%, 76% 100%, 52% 98%, 28% 100%, 2% 97%, 0% 72%, 2% 48%, 0% 20%)",
@@ -123,9 +123,8 @@ export default function Menu() {
                   <img
                     src={item.image}
                     alt={`${item.name} from Bear's Bakery`}
-                    className="aspect-[4/3] w-full object-cover md:aspect-square"
+                    className="theme-photo aspect-[4/3] w-full object-cover md:aspect-square"
                     loading="lazy"
-                    style={{ filter: "sepia(0.18) saturate(0.96)" }}
                   />
                 </div>
                 <div>
