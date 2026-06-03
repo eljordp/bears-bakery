@@ -6,12 +6,12 @@ const ABOUT_IMG =
 export default function About() {
   return (
     <section id="about" className="relative bg-ivory paper-grain">
-      <div className="max-w-zine mx-auto px-6 md:px-10 py-32 md:py-56">
-        <div className="text-center mb-16 md:mb-20">
-          <div className="font-serif italic text-ink/60 text-sm md:text-base mb-6">
+      <div className="max-w-zine mx-auto px-5 py-24 md:px-10 md:py-36">
+        <div className="mb-12 text-center md:mb-16">
+          <div className="mb-5 font-serif italic text-sm text-ink/60 md:text-base">
             About
           </div>
-          <h2 className="font-display text-ink tracking-tightest leading-[0.92] text-[clamp(2.4rem,6vw,4.5rem)]">
+          <h2 className="font-display text-4xl leading-tight text-ink md:text-6xl">
             The family, the <span className="italic">starter</span>, and the
             market
           </h2>
@@ -22,7 +22,7 @@ export default function About() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
-          className="font-serif text-ink/90 max-w-prose mx-auto text-[1.18rem] md:text-[1.28rem] leading-[1.75]"
+          className="mx-auto max-w-prose font-serif text-xl leading-relaxed text-ink/90 md:text-2xl"
         >
           <p>
             We are a small family. The same hands that run a landscape business
@@ -34,7 +34,7 @@ export default function About() {
           </p>
 
           {/* Inline image — small, sits inside the essay */}
-          <figure className="my-12 md:my-14 mx-auto max-w-sm">
+          <figure className="my-12 mx-auto max-w-2xl md:my-14">
             <div
               className="overflow-hidden"
               style={{
@@ -45,11 +45,11 @@ export default function About() {
               <img
                 src={ABOUT_IMG}
                 alt="Hands working dough on a wooden board"
-                className="w-full aspect-[4/3] object-cover"
+                className="aspect-[5/3] w-full object-cover"
                 style={{ filter: "sepia(0.28) saturate(0.94)" }}
               />
             </div>
-            <figcaption className="mt-4 text-center font-serif italic text-ink/55 text-sm">
+            <figcaption className="mt-4 text-center font-serif italic text-sm text-ink/55">
               The kitchen, Friday night.
             </figcaption>
           </figure>

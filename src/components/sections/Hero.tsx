@@ -1,66 +1,68 @@
-import { motion } from "framer-motion";
+import { ArrowDown, Mail } from "lucide-react";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=1600&q=80";
 
 export default function Hero() {
   return (
-    <section
-      id="top"
-      className="relative bg-ivory paper-grain"
-    >
-      <div className="max-w-zine mx-auto px-6 md:px-10 pt-24 md:pt-36 pb-28 md:pb-44">
-        {/* Tiny establishment line */}
-        <motion.div
-          initial={{ opacity: 0, y: 8 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
-          className="text-center font-serif italic text-ink/65 text-sm md:text-base mb-10 md:mb-14"
-        >
-          A small family bakery &middot; Big Island, Hawai&lsquo;i
-        </motion.div>
+    <section id="top" className="relative bg-ivory paper-grain">
+      <div className="max-w-zine mx-auto grid items-center gap-12 px-5 pb-20 pt-14 md:px-10 md:pb-28 md:pt-20 lg:grid-cols-[1.02fr_0.98fr]">
+        <div>
+          <p className="font-serif italic text-base text-ink/65 md:text-lg">
+            Big Island, Hawai&lsquo;i. Small-batch Saturday bakes.
+          </p>
 
-        {/* Wordmark — bakery sign feel */}
-        <motion.h1
-          initial={{ opacity: 0, y: 14 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1.1,
-            delay: 0.1,
-            ease: [0.22, 0.61, 0.36, 1],
-          }}
-          className="text-center font-display text-ink leading-[0.86] tracking-tightest text-[clamp(4.5rem,15vw,11rem)]"
-        >
-          Bear&rsquo;s
-          <br />
-          <span className="italic">Bakery</span>
-        </motion.h1>
+          <h1 className="mt-7 font-display text-6xl leading-none text-ink sm:text-7xl md:text-8xl lg:text-9xl">
+            <span className="sr-only">Bear&rsquo;s Bakery</span>
+            <span aria-hidden="true">
+              Bear&rsquo;s
+              <br />
+              <span className="italic">Bakery</span>
+            </span>
+          </h1>
 
-        {/* Tagline — italic small caps, tucked */}
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1,
-            delay: 0.3,
-            ease: [0.22, 0.61, 0.36, 1],
-          }}
-          className="mt-10 md:mt-14 text-center font-serif italic text-ink/75 uppercase tracking-[0.32em] text-[11px] md:text-xs"
-        >
-          Flour &middot; Water &middot; Salt &middot; Time
-        </motion.div>
+          <p className="mt-8 max-w-xl font-serif text-xl leading-relaxed text-ink/78 md:text-2xl">
+            Slow-fermented sourdough, focaccia, and sweet treats from a
+            sixty-year Italian starter. Baked by one family, picked up at the
+            market.
+          </p>
 
-        {/* Hero photo — paper-tear edge, warm sepia overlay */}
-        <motion.figure
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 1.2,
-            delay: 0.5,
-            ease: [0.22, 0.61, 0.36, 1],
-          }}
-          className="mt-20 md:mt-28 relative mx-auto max-w-[44rem]"
-        >
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+            <a
+              href="mailto:hello@bearsbakery.com?subject=Reserve%20a%20Saturday%20loaf"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3.5 font-serif italic text-ivory transition-colors hover:bg-umber"
+            >
+              <Mail className="h-4 w-4" strokeWidth={1.7} />
+              Reserve Saturday loaf
+            </a>
+            <a
+              href="#menu"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/25 px-5 py-3.5 font-serif italic text-ink transition-colors hover:border-sage hover:text-leaf"
+            >
+              <ArrowDown className="h-4 w-4" strokeWidth={1.7} />
+              See this week&rsquo;s menu
+            </a>
+          </div>
+
+          <dl className="mt-10 hidden max-w-xl grid-cols-3 border-y border-ink/15 py-5 text-center sm:grid md:text-left">
+            {[
+              ["60 years", "starter"],
+              ["7 a.m.", "market pickup"],
+              ["small", "weekly batch"],
+            ].map(([value, label]) => (
+              <div key={label} className="px-2 first:pl-0 last:pr-0">
+                <dt className="font-display text-2xl text-ink md:text-3xl">
+                  {value}
+                </dt>
+                <dd className="mt-1 font-serif italic text-sm text-ink/60 md:text-base">
+                  {label}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+
+        <figure className="relative mx-auto w-full max-w-[34rem]">
           <div
             className="relative overflow-hidden"
             style={{
@@ -71,10 +73,9 @@ export default function Hero() {
             <img
               src={HERO_IMG}
               alt="A loaf of sourdough cooling on linen"
-              className="w-full h-[clamp(22rem,54vw,34rem)] object-cover"
+              className="aspect-[4/5] w-full object-cover md:aspect-[5/6]"
               style={{ filter: "sepia(0.32) saturate(0.92) contrast(0.96)" }}
             />
-            {/* warm cream overlay to kill the stock look */}
             <div
               className="absolute inset-0 mix-blend-multiply"
               style={{ backgroundColor: "rgba(244, 236, 219, 0.22)" }}
@@ -86,11 +87,14 @@ export default function Hero() {
                   "radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(43,29,18,0.18) 100%)",
               }}
             />
+            <div className="absolute bottom-5 left-5 rounded-md bg-ivory/92 px-4 py-3 font-serif italic text-ink shadow-sm">
+              Fresh at the Saturday market
+            </div>
           </div>
-          <figcaption className="mt-6 text-center font-serif italic text-ink/55 text-sm">
+          <figcaption className="mt-5 text-center font-serif italic text-sm text-ink/55">
             From last Saturday&rsquo;s bake.
           </figcaption>
-        </motion.figure>
+        </figure>
       </div>
     </section>
   );
