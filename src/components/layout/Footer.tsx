@@ -15,13 +15,13 @@ export default function Footer() {
           <div className="font-serif italic text-ivory/70 md:text-right">
             <a
               href="mailto:hello@bearsbakery.com"
-              className="block transition-colors hover:text-oat"
+              className="flex min-h-11 items-center transition-colors hover:text-oat md:justify-end"
             >
               hello@bearsbakery.com
             </a>
             <a
               href="https://instagram.com/bearsbakery"
-              className="mt-2 block transition-colors hover:text-oat"
+              className="flex min-h-11 items-center transition-colors hover:text-oat md:justify-end"
             >
               @bearsbakery
             </a>

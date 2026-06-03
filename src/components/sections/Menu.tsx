@@ -169,7 +169,7 @@ export default function Menu() {
             What we bake changes by the week. Follow{" "}
             <a
               href="https://instagram.com/bearsbakery"
-              className="text-umber underline decoration-umber/40 underline-offset-4 hover:decoration-umber"
+              className="inline-flex min-h-11 items-center text-umber underline decoration-umber/40 underline-offset-4 hover:decoration-umber"
             >
               @bearsbakery
             </a>{" "}
@@ -178,7 +178,7 @@ export default function Menu() {
 
           <a
             href="mailto:hello@bearsbakery.com?subject=Reserve%20a%20loaf"
-            className="inline-flex items-center gap-2 rounded-md bg-sage px-5 py-3 font-serif italic text-ivory transition-colors hover:bg-leaf"
+            className="inline-flex min-h-12 items-center gap-2 rounded-md bg-sage px-5 font-serif italic text-ivory transition-colors hover:bg-leaf"
           >
             <Mail className="h-4 w-4" strokeWidth={1.7} />
             Reserve a loaf

@@ -6,13 +6,13 @@ const HERO_IMG =
 export default function Hero() {
   return (
     <section id="top" className="relative bg-ivory paper-grain">
-      <div className="max-w-zine mx-auto grid items-center gap-12 px-5 pb-20 pt-14 md:px-10 md:pb-28 md:pt-20 lg:grid-cols-[1.02fr_0.98fr]">
+      <div className="max-w-zine mx-auto grid items-center gap-8 px-5 pb-14 pt-9 sm:gap-12 sm:pb-20 sm:pt-14 md:px-10 md:pb-28 md:pt-20 lg:grid-cols-[1.02fr_0.98fr]">
         <div>
           <p className="font-serif italic text-base text-ink/65 md:text-lg">
             Big Island, Hawai&lsquo;i. Small-batch Saturday bakes.
           </p>
 
-          <h1 className="mt-7 font-display text-6xl leading-none text-ink sm:text-7xl md:text-8xl lg:text-9xl">
+          <h1 className="mt-5 font-display text-5xl leading-none text-ink sm:mt-7 sm:text-7xl md:text-8xl lg:text-9xl">
             <span className="sr-only">Bear&rsquo;s Bakery</span>
             <span aria-hidden="true">
               Bear&rsquo;s
@@ -21,23 +21,23 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="mt-8 max-w-xl font-serif text-xl leading-relaxed text-ink/78 md:text-2xl">
+          <p className="mt-6 max-w-xl font-serif text-lg leading-relaxed text-ink/78 sm:mt-8 sm:text-xl md:text-2xl">
             Slow-fermented sourdough, focaccia, and sweet treats from a
             sixty-year Italian starter. Baked by one family, picked up at the
             market.
           </p>
 
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-7 flex flex-col gap-3 sm:mt-9 sm:flex-row">
             <a
               href="mailto:hello@bearsbakery.com?subject=Reserve%20a%20Saturday%20loaf"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-3.5 font-serif italic text-ivory transition-colors hover:bg-umber sm:whitespace-nowrap"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-ink px-5 font-serif italic text-ivory transition-colors hover:bg-umber sm:whitespace-nowrap"
             >
               <Mail className="h-4 w-4" strokeWidth={1.7} />
               Reserve Saturday loaf
             </a>
             <a
               href="#menu"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-ink/25 px-5 py-3.5 font-serif italic text-ink transition-colors hover:border-sage hover:text-leaf sm:whitespace-nowrap"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md border border-ink/25 px-5 font-serif italic text-ink transition-colors hover:border-sage hover:text-leaf sm:whitespace-nowrap"
             >
               <ArrowDown className="h-4 w-4" strokeWidth={1.7} />
               See this week&rsquo;s menu
